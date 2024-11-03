@@ -1,0 +1,40 @@
+.FooterContainer {
+
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-top: 2px solid #A5A5A5;
+}
+
+.FooterContents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.FtLogo {
+
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.Text1,
+.Text2,
+.Text3 {
+    margin: 3px 0;
+    font-weight: bold;
+}
+
+.FooterContents2 {
+
+    display: flex;
+    gap: 50px;
+    font-weight: bold;
+    cursor: pointer;
+}
