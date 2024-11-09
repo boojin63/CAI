@@ -9,6 +9,7 @@
     align-items: center;
     flex-direction: column;
     border-top: 2px solid #A5A5A5;
+    z-index: 1009;
 }
 
 .FooterContents {
@@ -22,6 +23,7 @@
 
     margin-bottom: 15px;
     cursor: pointer;
+
 }
 
 .Text1,

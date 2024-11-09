@@ -1,20 +1,101 @@
-
 .LoginContainer {
 
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100vw;
-    height: 185vh;
-    background-color: black;
-    opacity: 50%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 1010;
 }
 
 .LoginContents {
 
-    position: absolute;
-    top: 50%;
-    width: 500px;
-    height: 500px;
-    opacity: 100%;
-    background-color: black;
+    width: 550px;
+    height: 580px;
+    background-color: white;
+    opacity: 1;
+    position: relative;
+    border-radius: 30px;
     z-index: 1011;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.CloseBtn {
+
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 40px;
+    top: 30px;
+    cursor: pointer;
+}
+
+.Logintxt,
+.subtxt {
+
+    margin: 3px 0;
+}
+
+.Logintxt {
+
+    font-size: 2rem;
+    margin-top: 120px;
+
+}
+
+.subtxt {
+
+    font-size: 1rem;
+    color: #95ADB8;
+    margin-bottom: 20px;
+
+}
+
+.kakao,
+.naver,
+.google {
+
+    width: 350px;
+    height: 55px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.kakao p,
+.naver p,
+.google p {
+
+    margin: 0;
+    font-weight: bold;
+}
+
+.kakao {
+
+    background-color: #FFDE26;
+}
+
+.naver {
+
+    background-color: #1DC800;
+}
+
+.google {
+
+    border: 0.5px solid black;
+}
+
+.GIcon {
+
+    margin-right: 20px;
 }
