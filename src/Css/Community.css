@@ -1,0 +1,319 @@
+html, body {
+  overflow-x: hidden;
+}
+
+.CommunityContainer {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 140px 100px;
+  box-sizing: border-box;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.CommunitySearchSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 100px;
+}
+
+/* .CommunitySearchBar {
+  width: 70%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px 0 0 10px;
+} */
+
+.CommunitySearchBar {
+  width: 300px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.CommunityPostList {
+  margin-top: 20px;
+}
+
+.CommunityPostTable {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #FDFDFD;
+}
+
+.CommunityPostTable th, .CommunityPostTable td {
+  padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+.CommunityPostTable th {
+  background-color: #ecf4f7;
+  font-weight: bold;
+  border-top: 2px solid #01567A;
+}
+
+.CommunityPostTable td {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* .highlight {
+  color: red;
+  font-weight: bold;
+} */
+
+.CommunityPage {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.CommunityPage button {
+  margin: 0 5px;
+  text-decoration: none;
+  color: #939393;
+  font-weight: bold;
+  cursor: pointer;
+  border: none; 
+  background: none;
+  font-size: 17px;
+}
+
+.CommunityPage button.active {
+  color: #000000;
+  font-weight: bold;
+}
+
+/* 버튼 */
+.CommunitySearchBtn {
+  padding: 9.7px 15px;
+  font-size: 1rem;
+  background-color: #ccc;
+  color: #fff;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+}
+
+.CommunityWriteBtn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #95ADB8;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.CommunityRemoveFileBtn {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+.CommunitySubmitBtn {
+  background-color: #95ADB8;
+  border: none;
+  padding: 5px 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.CommunityCancelBtn {
+  background-color: #ccc;
+  border: none;
+  padding: 5px 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.CommunityBackBtn {
+  background-color: #95ADB8;
+  border: none;
+  padding: 5px 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+
+.MemberDeleteBtn {
+  background-color: #ccc;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.MemberEditBtn {
+  background-color: #95ADB8;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+}
+
+.AdminDeleteBtn {
+  background-color: #95ADB8;
+  border: none;
+  border-radius: 10px;
+  margin: 0 5px;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+}
+
+/* 글쓰기 */
+.CommunityWritePostContainer {
+  background-color: #FDFDFD;
+  padding: 20px;
+  margin-top: 160px;
+  border-top: 2px solid #01567A;
+}
+
+.CommunityWritePostForm .CommunityFormGroup {
+  margin-bottom: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.CommunityWritePostForm label {
+  display: block;
+  font-weight: bold;
+  width: 40px;
+}
+
+.CommunityWritePostForm input[type="text"],
+.CommunityWritePostForm textarea,
+.CommunityWritePostForm input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.CommunityWritePostForm textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.CommunityFormActions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+  top: 0;
+  padding: 0;
+  gap: 10px;
+  margin-right: 10px;
+}
+
+/* 내용 확인 */
+.CommunityPostViewContainer {
+  margin-top: 111px;
+}
+
+.CommunityPostViewBtnContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+}
+
+.CommunityPostViewHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid #01567A;
+  background-color: #FDFDFD;
+  padding: 0px 10px 15px 10px;
+}
+
+.CommunityPostContent {
+  margin-top: -16px;
+  background-color: #FDFDFD;
+  padding: 0px 10px 0px 20px;
+  border-top: 1px solid #ccc;
+  min-height: 500px;
+  overflow: auto;
+}
+
+.CommunityAttachmentsPreview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+
+.CommunityAttachmentPreview {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.CommunityAttachmentItem {
+  max-width: 200px;
+}
+
+/* 게시물 사진 영상 모달 */
+.CommunityModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.CommunityModalContent {
+  background: #fff;
+  padding: 20px;
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+}
+
+.CommunityModalCloseBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.CommunityModalMedia {
+  max-width: 100%;
+  max-height: 100%;
+}
