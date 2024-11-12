@@ -5,6 +5,8 @@ import Notice from './Components/Notice';
 import Record from './Components/Record';
 import Analyze from './Components/Analyze';
 import Community from './Components/Community';
+import KaKaoRedirect from './Components/KaKaoRedirect';
+import Callback from './Components/KaKaoCallback'; 
 
 function App () {
 
@@ -16,6 +18,8 @@ function App () {
         <Route path='/record' element={<Record/>}/>
         <Route path='/analyze' element={<Analyze/>}/>
         <Route path='/community' element={<Community/>}/>
+        <Route path='/oauth' element={<KaKaoRedirect/>}/>
+        <Route path='/oauth/callback' element={<Callback/>}/>
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>
