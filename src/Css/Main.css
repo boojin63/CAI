@@ -1,0 +1,63 @@
+.MainContainer {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Mainbg {
+    position: relative;
+    width: 100vw;
+    height: 53.5vh;
+    top: 17.7vh;
+}
+
+.bgCover {
+
+    position: absolute;
+    top: 17.7%;
+    width: 100vw;
+    height: 53.5vh;
+    opacity: 50%;
+    background-color: black;
+    z-index: 1010;
+}
+
+.MainText {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    position: absolute;
+    top: 30vh;
+    left: 5vw;
+    font-weight: bold;
+    color: white;
+    z-index: 1020;
+}
+
+.MainText1, .MainText2 {
+
+    font-size: 3rem;
+    margin: 3px 0;
+}
+
+.MainText3 {
+    margin-top: 40px;
+    font-size: 1.3rem;
+}
+
+.AIbtn {
+    font-size: 1.5rem;
+    color: #01567A;
+    background-color: white;
+    width: 220px;
+    height: 60px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
