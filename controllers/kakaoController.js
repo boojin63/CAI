@@ -4,6 +4,11 @@ require('dotenv').config();
 exports.kakaoLogin = async (req, res) => {
     const { code } = req.body;
 
+    if (!code) {
+        console.error('카카오 로그인 오류: 인증 코드가 없습니다.');
+        return res.status(400).json({ error: '인증 코드가 없습니다.' });
+    }
+    
     try {
         // 카카오 서버에서 액세스 토큰 요청
         const tokenResponse = await axios.post('https://kauth.kakao.com/oauth/token', null, {
@@ -16,6 +21,8 @@ exports.kakaoLogin = async (req, res) => {
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         });
 
+        console.log('토큰 응답:', tokenResponse.data);
+
         const { access_token } = tokenResponse.data;
 
         // 사용자 정보 요청
@@ -23,23 +30,23 @@ exports.kakaoLogin = async (req, res) => {
             headers: { Authorization: `Bearer ${access_token}` },
         });
 
+        console.log('사용자 정보 응답:', userInfoResponse.data);
+
         const userInfo = userInfoResponse.data;
         const user_id = userInfo.id;
 
         // 세션에 사용자 정보 저장
         req.session.user_id = user_id;
-        req.session.nickname = userInfo.properties.nickname;
 
         res.status(200).json({
             message: '카카오 로그인 성공',
             user: {
                 id: user_id,
-                nickname: userInfo.properties.nickname,
             },
         });
     } catch (error) {
-        console.error('카카오 로그인 오류:', error);
-        res.status(500).json({ error: '로그인에 실패했습니다.' });
+        console.error('카카오 로그인 오류:', error.response?.data || error.message);
+        res.status(500).json({ error: '로그인에 실패했습니다.', details: error.response?.data });
     }
 };
 
