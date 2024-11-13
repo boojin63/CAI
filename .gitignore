@@ -1,0 +1,35 @@
+# Node.js 기본 폴더
+node_modules/
+npm-debug.log
+yarn-error.log
+*.log
+
+# 환경 변수 파일
+.env
+
+# 캐시 및 임시 파일
+*.tmp
+*.temp
+.cache/
+dist/
+build/
+
+# 데이터베이스 파일
+*.sqlite
+*.db
+*.sql
+
+# 시스템 파일
+.DS_Store
+Thumbs.db
+
+# IDE 및 에디터 파일
+.vscode/
+.idea/
+*.swp
+
+# Git 관련 파일
+.git/
+
+# 특정 설정 파일
+config/local.js
