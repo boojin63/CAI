@@ -35,7 +35,7 @@ const Header = () => {
         navigate('/community')
     }
     
-    const ToNotice = () => {
+    const ToNotice = () => { 
 
         navigate('/notice')
     }

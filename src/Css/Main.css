@@ -1,23 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
 .MainContainer {
 
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+
 }
 
 .Mainbg {
     position: relative;
     width: 100vw;
     height: 53.5vh;
-    top: 17.7vh;
+    top: 17vh;
 }
 
 .bgCover {
 
     position: absolute;
-    top: 17.7%;
-    width: 100vw;
-    height: 53.5vh;
+    top: 17.2%;
+    width: 99.6vw;
+    height: 53.6vh;
     opacity: 50%;
     background-color: black;
     z-index: 1010;
@@ -61,3 +69,140 @@
     border-radius: 10px;
     cursor: pointer;
 }
+
+.History {
+
+    position: relative;
+    margin-top: 10% ;
+    margin-left: 2%;
+    overflow: hidden;
+}
+
+.HTitle {
+
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.HVideo {
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.hVideo1, .hVideo2, .hVideo3, .hVideo4, .rImage1, .rImage2, .rImage3, .rImage4, .rImage5 {
+    flex: 1 1 auto; /* 요소가 부모 컨테이너의 가용 공간을 나눠서 차지 */
+    max-width: 100%; /* 부모의 너비를 초과하지 않음 */
+}
+
+.subTitle {
+    
+    position: relative;
+    display: flex;
+    text-align: center;
+    margin-left: 5%;
+    gap: 13%;
+    font-weight: bold;
+}
+
+.Range {
+
+    position: relative;
+    margin-top: 2%;
+    margin-left: 2%;
+    overflow: hidden;
+    padding-bottom: 3%;
+}
+
+.RangeTitle {
+
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.RImage {
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.RsubTitle {
+    
+    position: relative;
+    display: flex;
+    text-align: center;
+    margin-left: 6%;
+    gap: 17%;
+    font-weight: bold;
+}
+
+.Line1 {
+
+    width: 95%;
+    color: #A5A5A5;
+}
+
+.MTitle {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight:bold ;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+
+.MImage {
+    
+    position: relative;
+    margin-left: 6%;
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    gap: 30px;
+}
+
+.MContents {
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.MCText {
+
+    position: relative;
+    margin-left: 3%;
+    text-align: left;
+}
+
+.MCTitle1, .MCTitle2, .MCTitle3, .MCTitle4 {
+
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.MCsub1 {
+
+    margin-bottom: 120px;
+}
+
+.MCsub2 {
+
+    margin-bottom: 160px;
+}
+
+.MCsub3 {
+
+    margin-bottom: 130px;
+}
+
