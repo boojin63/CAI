@@ -5,19 +5,17 @@ import "../Css/Analyze.css";
 
 const Analyze = () => {
     const fileInputRef = useRef(null);
-    const [videoPreview, setVideoPreview] = useState(null); // 미리보기 URL 상태
+    const [videoPreview, setVideoPreview] = useState(null);
 
-    // 파일 선택 트리거
     const handleUploadClick = () => {
         fileInputRef.current.click();
     };
 
-    // 파일 업로드 처리 및 미리보기 URL 설정
     const handleFileChange = (event) => {
         const file = event.target.files[0];
         if (file) {
             const previewUrl = URL.createObjectURL(file);
-            setVideoPreview(previewUrl); // 미리보기 URL 설정
+            setVideoPreview(previewUrl);
         }
     };
 
