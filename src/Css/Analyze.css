@@ -28,7 +28,7 @@
 
     position: absolute;
     top: 29%;
-    width: 58vw;
+    width: 78vw;
     border: solid 1px black ;
 }
 
@@ -85,12 +85,15 @@
     justify-content: center;
     align-items: center;
     font-weight: bold;
+    border-top: 2px solid black;
+    width: 78vw;
+    margin-top: 2%;
 }
 
 .ResultTitle {
 
     position: absolute;
-    left: 24%;
+    left: 10%;
     font-size: 1.4rem ;
 }
 
@@ -98,6 +101,6 @@
 
     display: flex;
     text-align: center;
-    margin-top: 30%;
+    margin-top: 7%;
 }
 

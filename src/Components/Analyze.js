@@ -8,6 +8,7 @@ const Analyze = () => {
     const [videoPreview, setVideoPreview] = useState(null);
     const [selectedFile, setSelectedFile] = useState(null); // 업로드된 파일 저장
     const [analysisResult, setAnalysisResult] = useState(null); // 분석 결과 저장
+    const [showResult, setShowResult] = useState(false); // 결과 표시 여부
 
     const handleUploadClick = () => {
         fileInputRef.current.click();
@@ -43,6 +44,7 @@ const Analyze = () => {
 
             const result = await response.json();
             setAnalysisResult(result); // 분석 결과 저장
+            setShowResult(true); // 결과 표시
             alert("영상 업로드 및 분석이 완료되었습니다.");
         } catch (error) {
             console.error("Error:", error);
@@ -87,25 +89,28 @@ const Analyze = () => {
                             분석하기
                         </p>
                     </div>
-                    <div className="ResultContainer">
-                        <div className="ResultTitle">분석결과</div>
-                        <div className="ResultText">
-                            {analysisResult ? (
-                                <div>
-                                    <h3>결과 요약:</h3>
-                                    <p>{analysisResult.summary}</p>
-                                    <h3>상세 분석:</h3>
-                                    <ul>
-                                        {analysisResult.details.map((detail, index) => (
-                                            <li key={index}>{detail}</li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            ) : (
-                                "분석 결과가 여기에 표시됩니다."
-                            )}
+                    {/* 분석 결과 영역: showResult 상태에 따라 표시 */}
+                    {showResult && (
+                        <div className="ResultContainer">
+                            <div className="ResultTitle">분석결과</div>
+                            <div className="ResultText">
+                                {analysisResult ? (
+                                    <div>
+                                        <h3>결과 요약:</h3>
+                                        <p>{analysisResult.summary}</p>
+                                        <h3>상세 분석:</h3>
+                                        <ul>
+                                            {analysisResult.details.map((detail, index) => (
+                                                <li key={index}>{detail}</li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                ) : (
+                                    "분석 결과가 여기에 표시됩니다."
+                                )}
+                            </div>
                         </div>
-                    </div>
+                    )}
                 </div>
             </div>
             <Footer />
