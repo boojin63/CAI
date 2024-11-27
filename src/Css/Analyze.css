@@ -77,3 +77,27 @@
     justify-content: center;
     
 }
+
+.ResultContainer {
+
+    display: flex;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.ResultTitle {
+
+    position: absolute;
+    left: 24%;
+    font-size: 1.4rem ;
+}
+
+.ResultText {
+
+    display: flex;
+    text-align: center;
+    margin-top: 30%;
+}
+

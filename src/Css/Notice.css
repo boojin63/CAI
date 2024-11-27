@@ -1,0 +1,46 @@
+.NoticeContainer {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 140px 100px;
+  box-sizing: border-box;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+}
+
+.NoticeHeader h1 {
+  margin-top: 100px;
+  font-weight: bold;
+  color: #01567A;
+}
+
+/* .NoticeBreadcrumb {
+  margin: 10px 0;
+  font-size: 10px;
+  color: #01567A;
+  border: none;
+}
+
+.NoticeBreadcrumb span {
+  cursor: pointer;
+} */
+
+.NoticeContent {
+  line-height: 1.8;
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+}
+
+.NoticeContent ol {
+  list-style: decimal;
+  text-align: left;
+}
+
+.NoticeContent li {
+  margin-bottom: 15px;
+  text-align: left;
+}
