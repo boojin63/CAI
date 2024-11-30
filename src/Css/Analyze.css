@@ -81,6 +81,7 @@
 .ResultContainer {
 
     display: flex;
+    flex-direction: column;
     text-align: left;
     justify-content: center;
     align-items: center;
@@ -90,16 +91,21 @@
     margin-top: 2%;
 }
 
-.ResultTitle {
-
-    position: absolute;
-    left: 10%;
-    font-size: 1.4rem ;
+.Title {
+    font-size: 1.5rem;
 }
 
 .ResultText {
 
     display: flex;
     text-align: center;
-    margin-top: 7%;
+}
+
+.Text4 {
+
+    max-width: 1000px;
+    display: flex;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
 }

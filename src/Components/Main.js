@@ -23,7 +23,6 @@ const Main = () => {
             <Header />
             <div className="MainContainer">
                 <div className="MainContents">
-                    {/* 상단 이미지 및 AI 분석 버튼 */}
                     <div className="ImageBox">
                         <img src="/Images/Mainbg.png" className="Mainbg" />
                         <div className="bgCover"></div>
@@ -37,7 +36,8 @@ const Main = () => {
                         </div>
                     </div>
 
-                    {/* 사고 분석 사례 */}
+                    
+
                     <div className="History">
                         <p className="HTitle">사고 분석 사례</p>
                         <div className="HVideo">
@@ -56,28 +56,8 @@ const Main = () => {
                         </div>
                     </div>
 
-                    {/* AI 분석 범위 */}
-                    <div className="Range">
-                        <p className="RangeTitle">AI 분석 범위</p>
-                        <div className="RImage">
-                            <img src="/Images/range1.png" className="rImage1" />
-                            <img src="/Images/range2.png" className="rImage2" />
-                            <img src="/Images/range3.png" className="rImage3" />
-                            <img src="/Images/range4.png" className="rImage4" />
-                            <img src="/Images/range1.png" className="rImage5" />
-                        </div>
-                        <div className="RsubTitle">
-                            <p>신호등 감지</p>
-                            <p>차선 감지</p>
-                            <p>속도 감지</p>
-                            <p>브레이크등 감지</p>
-                            <p>정지선 감지</p>
-                        </div>
-                    </div>
-
                     <hr className="Line1" />
-
-                    {/* AI 이용 방법 */}
+                    
                     <div className="AIMethod">
                         <p className="MTitle">AI 이용방법</p>
                         <div className="MContents">
