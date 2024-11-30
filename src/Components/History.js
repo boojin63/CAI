@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import "../Css/History.css";
+import { useNavigate } from "react-router-dom";
 
 const Record = () => {
   const [startDate, setStartDate] = useState("");
@@ -9,10 +10,11 @@ const Record = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const recordsPerPage = 10; // 한 페이지에 표시할 데이터 수
+  const navigate = useNavigate();
 
   // 초기 데이터
   const records = [
-    { id: 1, title: "2024년 8월 29일 사고", user: "Speedster123", date: "2024-08-29 15:57:22", description: "Collision between a white sedan and a black SUV due to a traffic signal violation." },
+    { id: 1, title: "사거리에서 발생한 교통사고...", user: "Speedster123", date: "2024-08-29 15:57:22", description: "Collision between a white sedan and a black SUV due to a traffic signal violation." },
     { id: 2, title: "2024년 8월 31일 사고", user: "RoadWarrior", date: "2024-08-31 12:15:45", description: "Collision at an intersection between a vehicle going straight and another making a left turn." },
     { id: 3, title: "2024년 9월 1일 사고", user: "MotoMaster", date: "2024-09-01 18:22:11", description: "A minor accident involving a motorcycle and a white sedan, causing the motorcycle to fall over." },
     { id: 4, title: "2024년 9월 3일 사고", user: "LeftTurnHero", date: "2024-09-03 14:10:32", description: "Collision between a black SUV and a blue sedan during an unprotected left turn." },
@@ -24,7 +26,9 @@ const Record = () => {
     { id: 10, title: "2024년 9월 15일 사고", user: "HighwayBlues", date: "2024-09-15 22:00:33", description: "A multi-vehicle collision caused by sudden braking at a tollgate on the highway." }
 ];
 
-
+    const Tohistory = () => {
+        navigate('/history1')
+    }
 
   // 필터링된 데이터
   const filteredRecords = records.filter((record) => {
@@ -60,6 +64,7 @@ const Record = () => {
     setCurrentPage(page);
   };
 
+  
   // 초기화
   const resetFilters = () => {
     setStartDate("");
@@ -140,7 +145,7 @@ const Record = () => {
               {currentRecords.map((record) => (
                 <tr key={record.id}>
                   <td>{record.id}</td>
-                  <td>{record.title}</td>
+                  <td >{record.title}</td>
                   <td>{record.user}</td>
                   <td>{record.date}</td>
                 </tr>
