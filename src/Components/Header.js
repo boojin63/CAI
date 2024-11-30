@@ -38,7 +38,7 @@ const Header = () => {
                 <p className="AnalyzeBtn" onClick={() => restrictedNavigate("/analyze")}>
                     AI 분석
                 </p>
-                <p className="RecordBtn" onClick={() => restrictedNavigate("/record")}>
+                <p className="RecordBtn" onClick={() => restrictedNavigate("/history")}>
                     이력조회
                 </p>
                 <p className="CommunityBtn" onClick={() => restrictedNavigate("/community")}>
