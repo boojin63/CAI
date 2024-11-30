@@ -1,21 +1,27 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "./AuthContext";
 import Login from "./Login";
 import "../Css/Header.css";
 
 const Header = () => {
     const navigate = useNavigate();
-
+    const { isLoggedIn, login, logout } = useAuth();
     const [modal, setModal] = useState(false);
-    const [isLoggedIn, setIsLoggedIn] = useState(false); // 로그인 상태 관리
 
     const toggleModal = () => {
         setModal(!modal);
     };
 
     const handleLoginSuccess = () => {
-        setIsLoggedIn(true); // 로그인 성공 시 상태 변경
-        setModal(false); // 로그인 모달 닫기
+        login(); // 로그인 상태를 글로벌 상태로 설정
+        setModal(false);
+    };
+
+    const handleLogout = () => {
+        logout(); // 로그아웃 실행
+        alert("로그아웃 되었습니다.");
+        navigate("/"); // 로그아웃 후 메인 페이지로 이동
     };
 
     const restrictedNavigate = (path) => {
@@ -23,7 +29,7 @@ const Header = () => {
             navigate(path);
         } else {
             alert("로그인이 필요합니다.");
-            toggleModal(); // 로그인 모달 열기
+            toggleModal();
         }
     };
 
@@ -49,11 +55,16 @@ const Header = () => {
                 </p>
             </div>
             {isLoggedIn ? (
-                <img
-                    src="/Images/UserIcon.png"
-                    className="UserIcon"
-                    alt="사용자 아이콘"
-                />
+                <div className="UserActions">
+                    <img
+                        src="/Images/UserIcon.png"
+                        className="UserIcon"
+                        alt="사용자 아이콘"
+                    />
+                    <p className="LogoutBtn" onClick={handleLogout}>
+                        LOGOUT
+                    </p>
+                </div>
             ) : (
                 <p className="LoginBtn" onClick={toggleModal}>
                     LOGIN
